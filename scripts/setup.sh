@@ -6,10 +6,12 @@ fi
 git config --global user.email "me@hailey.rocks"
 git config --global user.name "Hailey"
 if [[ $(uname) == "Darwin" ]]; then
-	puts "Installing brew"
+	echo "Installing brew"
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	echo "Installing Apple developer tools"
-	xcode-select --install
+	if xcode-select --install; then
+		echo "Install failed"
+	fi
 	echo "Installing Emacs Plus"
 	brew tap d12frosted/emacs-plus
 	brew install emacs-plus
