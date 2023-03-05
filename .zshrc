@@ -11,3 +11,11 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 if [[ `config status --porcelain` ]]; then
     echo "${RED}uncommitted changes to config present${NC}"
 fi
+
+if [ ! -f ~/src/github.com/burke/minidev/dev.sh ]; then
+    mkdir -p ~/src/github.com/burke
+    git clone https://github.com/burke/minidev src/github.com/burke/minidev
+fi
+
+source ~/src/github.com/burke/minidev/dev.sh
+alias dcd="dev cd"
