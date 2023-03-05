@@ -17,6 +17,8 @@ if [[ $(uname) == "Darwin" ]]; then
 	brew install emacs-plus
 	echo "Installing Vim"
 	brew install vim
+  echo "Installing ripgrep"
+  brew install ripgrep
 elif (type apt-get > /dev/null); then
 	echo "Installing build-essential"
 	sudo apt-get install -y build-essential
@@ -28,6 +30,8 @@ elif (type pacman > /dev/null); then
 	sudo pacman -Sy --noconfirm vim
 	echo "Installing Emacs"
 	sudo pacman -Sy --noconfirm emacs
+  echo "Installing ripgrep"
+  sudo pacman -Sy --noconfirm ripgrep
 else
 	echo "Unsupported platform"
 	exit 1
