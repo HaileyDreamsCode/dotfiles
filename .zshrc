@@ -19,3 +19,18 @@ fi
 
 source ~/src/github.com/burke/minidev/dev.sh
 alias dcd="dev cd"
+
+if [ ! -f /usr/local/share/chruby/chruby.sh ]; then
+  dev clone postmodern/chruby
+  echo "Installing chruby. You may need to enter your sudo password."
+  sudo make install
+fi
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+if [ ! -f /usr/local/bin/ruby-install ]; then
+ dev clone postmodern/ruby-install
+ echo "Installing ruby-install. You may need to enter your sudo password."
+ sudo make install
+fi
