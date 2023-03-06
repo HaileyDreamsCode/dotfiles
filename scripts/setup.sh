@@ -19,6 +19,9 @@ if [[ $(uname) == "Darwin" ]]; then
 	brew install vim
   echo "Installing ripgrep"
   brew install ripgrep
+  echo "Installing Vagrant"
+  brew install vagrant
+  vagrant plugin install vagrant-hostsupdater
 elif (type apt-get > /dev/null); then
 	echo "Installing build-essential"
 	sudo apt-get install -y build-essential
