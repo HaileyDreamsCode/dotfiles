@@ -34,3 +34,7 @@ if [ ! -f /usr/local/bin/ruby-install ]; then
  echo "Installing ruby-install. You may need to enter your sudo password."
  sudo make install
 fi
+
+if [[ -e $HOME/src/chromium.googlesource.com/chromium/tools/depot_tools ]]; then
+  export PATH="$PATH:$HOME/src/chromium.googlesource.com/chromium/tools/depot_tools"
+fi
