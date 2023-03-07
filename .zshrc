@@ -38,3 +38,7 @@ fi
 if [[ -e $HOME/src/chromium.googlesource.com/chromium/tools/depot_tools ]]; then
   export PATH="$PATH:$HOME/src/chromium.googlesource.com/chromium/tools/depot_tools"
 fi
+
+if [[ -e $HOME/tools/codeql ]]; then
+  export PATH="$PATH:$HOME/tools/codeql"
+fi
