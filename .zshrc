@@ -42,3 +42,7 @@ fi
 if [[ -e $HOME/tools/codeql ]]; then
   export PATH="$PATH:$HOME/tools/codeql"
 fi
+
+if [[ -e /opt/homebrew/opt/libpq/bin ]]; then
+  export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
+fi
