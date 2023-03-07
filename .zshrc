@@ -44,5 +44,9 @@ if [[ -e $HOME/tools/codeql ]]; then
 fi
 
 if [[ -e /opt/homebrew/opt/libpq/bin ]]; then
-  export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
+   export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
+fi
+
+if [[ -e $HOME/tools/rmapi ]]; then
+    export PATH="$PATH:$HOME/tools/rmapi"
 fi
